@@ -1,0 +1,28 @@
+{
+  "name": "teste-api-cypress",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "npx serverest",
+    "test": "npx cypress open",
+    "cy:run": "npx cypress run",
+    "report:merge": "npx mochawesome-merge mochawesome-report/*.json -o mochawesome-report/report.json",
+    "report:generate": "npx marge mochawesome-report/report.json -f index -o mochawesome-report",
+    "cy:run:report": "npm run cy:run && npm run report:merge && npm run report:generate"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@faker-js/faker": "^9.8.0",
+    "joi": "^17.11.0",
+    "mochawesome": "^7.1.4",
+    "mochawesome-merge": "^5.0.0",
+    "mochawesome-report-generator": "^6.3.2",
+    "start-server-and-test": "^2.1.2"
+  },
+  "devDependencies": {
+    "cypress": "^15.4.0"
+  }
+}
