@@ -8,7 +8,8 @@
     "cy:run": "npx cypress run",
     "report:merge": "npx mochawesome-merge mochawesome-report/*.json -o mochawesome-report/report.json",
     "report:generate": "npx marge mochawesome-report/report.json -f index -o mochawesome-report",
-    "cy:run:report": "npm run cy:run && npm run report:merge && npm run report:generate"
+    "cy:run:report": "npm run cy:run && npm run report:merge && npm run report:generate",
+    "cy:run-ci": "start-server-and-test start http://localhost:3000/usuarios test"
   },
   "keywords": [],
   "author": "",
